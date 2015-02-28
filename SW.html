@@ -141,9 +141,15 @@ Suspendisse et orci et arcu porttitor pellentesque. Sed lacus nunc, fermentum ve
   triggers.eq(index).addClass('show');
   function changeImage(){
     triggers.removeClass('show').eq(index).addClass('show');
-  console.log(triggers);
-  console.log(triggers.eq(index));
+    clearInterval(interval);
+    interval = setInterval(function(){
+    right();
+  }, 4000);
   }
+  
+  var interval = setInterval(function(){
+    right();
+  }, 4000);
   
 </script>
 </html>
